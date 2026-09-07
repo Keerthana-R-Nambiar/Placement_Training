@@ -1,0 +1,32 @@
+Input: digits = "23"
+Output: ["ad","ae","af","bd","be","bf","cd","ce","cf"]
+Example 2:
+ 
+Input: digits = ""
+Output: []
+Example 3:
+ 
+Input: digits = "2"
+Output: ["a","b","c"]E
+
+CODE
+
+dic = {'2': ['a', 'b', 'c'],
+    '3': ['d', 'e', 'f'],
+    '4': ['g', 'h', 'i'],
+    '5': ['j', 'k', 'l'],
+    '6': ['m', 'n', 'o'],
+    '7': ['p', 'q', 'r', 's'],
+    '8': ['t', 'u', 'v'],
+    '9': ['w', 'x', 'y', 'z']}
+n = input()
+l = [""]
+for i in range(len(n)):
+    if n[i] in dic:
+        a = dic[n[i]]
+    l1 = []
+    for j in l:
+        for m in a:
+            l1.append(j + m)
+    l = l1
+print(l)
